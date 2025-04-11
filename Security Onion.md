@@ -9,7 +9,7 @@
     - Intrusion Detection Honeypot (IDH)
 - Host Visibility
 - Analysis Tools
-![network-info](https://docs.securityonion.net/en/2.4/_images/network-horiz.png)
+<img src="https://docs.securityonion.net/en/2.4/_images/network-horiz.png" alt="drawing" width="200"/>
 
 ## [Setup](https://docs.securityonion.net/en/2.4/getting-started.html)
 
@@ -18,7 +18,7 @@
 - Network Installation
 - Cloud Images
 - Pre-Loaded Appliances
-![grub](https://docs.securityonion.net/en/2.4/_images/01_grub.png)
+<img src="https://docs.securityonion.net/en/2.4/_images/01_grub.png" alt="drawing" width="200"/>
 
 ### Deployment Options
 - Import Node
