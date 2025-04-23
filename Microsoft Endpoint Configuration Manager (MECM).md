@@ -5,18 +5,19 @@
 ![MECM](https://www.itta.net/wp-content/uploads/2023/02/Microsoft-Endpoint-Manager-e1721405318658.png)
 
 ## Requirements
-1. SQL
-2. SQL ODBC
-3. Windows ADK
-4. Windows ADK PE
-5. .NET Framework 4.8 Update
+- SQL
+- SQL ODBC
+- Windows ADK
+- Windows ADK PE
+- .NET Framework 4.8 Update
 
 ## Update `Software Center`
 
-#### Automatically | Every 60 minutes
+#### `Automatically` Every 60 minutes
 
-#### Manual | Control Panel > View By: Icon > Configuration Manager > Actions
+#### `Manual` Control Panel > View By: Icon > Configuration Manager > Actions
 <img src="https://www.prajwaldesai.com/wp-content/uploads/2022/03/Trigger-SCCM-Machine-Policy-Retrieval-Evaluation-Cycle-Snap1.jpg" alt="drawing" width="500"/>
+
 #### PowerShell
 ```powershell
 # Trigger Machine Policy Retrieval & Evaluation Cycle in Config Manager
