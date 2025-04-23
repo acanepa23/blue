@@ -61,12 +61,12 @@ Remove-Item "C:\Temp"
 
 #### Conditions
 ```powershell
-if(<<this is $TRUE>>){
-    <<when $true do this>>
+if(<<is this $True or $False>>){
+    <<when $True do this>>
 }
 # optional
 else{
-    <<when $false do this>>
+    <<when $False do this>>
 }
 ```
 
