@@ -13,10 +13,13 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe
 > <img src="https://user.oc-static.com/upload/2022/04/26/16509977637453_image107.png" alt="drawing" width="800"/>
 
 ## Clear | Write | Variables
+#### Write-Host
+```powershell
+Write-Host "Hello World"
+```
+#### Logic
 ```powershell
 Clear-Host
-
-Write-Host "Hello World"
 
 Write-Host "Hello $env:username `n"
 
