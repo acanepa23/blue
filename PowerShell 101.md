@@ -105,9 +105,16 @@ Invoke-WebRequest "https://api.ipify.org" -OutFile "C:\Users\$env:username\Deskt
 ```
 
 ## Starting Processes
+#### Start-Process
+```powershell
+Start-Process notepad.exe #-Wait
+```
+#### Logic
 ```powershell
 $filepath = "C:\Users\$env:username\Desktop\ip.txt"
 
 Invoke-WebRequest "https://api.ipify.org" -OutFile $filepath
-Start-Process notepad.exe -ArgumentList "$filepath" -Wait
+Start-Process notepad.exe -ArgumentList $filepath
+
+Remove-Item $filepath
 ```
