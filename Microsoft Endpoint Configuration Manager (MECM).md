@@ -19,6 +19,5 @@
 ##### PowerShell
 ```powershell
 # Trigger Machine Policy Retrieval & Evaluation Cycle in Config Manager
-
 (Get-WmiObject -Namespace "ROOT\ccm" -Class "SMS_Client").TriggerSchedule("{00000000-0000-0000-0000-000000000021}")
 ```
