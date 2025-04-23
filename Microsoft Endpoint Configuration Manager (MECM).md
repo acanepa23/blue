@@ -11,7 +11,9 @@
 4. Windows ADK PE
 5. .NET Framework 4.8 Update
 
-### Update Software Center Packages
+### Update `Software Center`
+
+##### Automated: Every 60 minutes
 
 ##### Manual (Control Panel > View By: Icon > Configuration Manager > Actions)
 ![MECM](https://www.prajwaldesai.com/wp-content/uploads/2022/03/Trigger-SCCM-Machine-Policy-Retrieval-Evaluation-Cycle-Snap1.jpg)
