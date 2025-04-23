@@ -23,8 +23,11 @@ $username = $env:username
 Write-Host "`$username = $username `n"
 
 # store string in variable
-$var = "This Is Easy"
-Write-Host $username $var
+$myvar = " This Is Easy"
+Write-Host "${username}$myvar`n"
+
+# last trick
+Write-Host "C:\Users\${env:username}\Desktop"
 ```
 
 ## Test | Create | Remove
