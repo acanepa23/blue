@@ -13,12 +13,12 @@
 
 ## Update `Software Center`
 
-#### `Automatically` Every 60 minutes
+### `Automatically` Every 60 minutes
 
-#### `Manual` Control Panel > View By: Icon > Configuration Manager > Actions
+### `Manual` Control Panel > View By: Icon > Configuration Manager > Actions
 <img src="https://www.prajwaldesai.com/wp-content/uploads/2022/03/Trigger-SCCM-Machine-Policy-Retrieval-Evaluation-Cycle-Snap1.jpg" alt="drawing" width="600"/>
 
-#### PowerShell
+### PowerShell
 ```powershell
 # Trigger Machine Policy Retrieval & Evaluation Cycle in Config Manager
 (Get-WmiObject -Namespace "ROOT\ccm" -Class "SMS_Client").TriggerSchedule("{00000000-0000-0000-0000-000000000021}")
