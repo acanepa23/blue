@@ -32,7 +32,12 @@ $myvar = "This Is Easy"
 Write-Host "$username $myvar`n"
 
 # last trick
-Write-Host "C:\Users\$($env:username)\Desktop"
+Write-Host "$($env:username)"
+```
+
+### `Challange` Print The Path To Your Desktop
+```
+C:\Users\Administrator\Desktop
 ```
 
 ## Test | Create | Remove
@@ -89,6 +94,11 @@ if(Test-Path "C:\Temp\bad.txt" -PathType Leaf){
 }
 ```
 
+### `Challange` Create C:\Temp Directory & A Blank File Named After Your Username
+```
+C:\Temp\Administrator.txt
+```
+
 ## Website Requests
 
 #### Invoke-Webrequest
@@ -104,6 +114,11 @@ Write-Host "StatusCode = $($request.StatusCode)"
 Write-Host "IP = $ip" 
 ```
 
+### `Challange` Print the Content if the StatusCode is 200
+```
+xxx.xxx.xxx.xxx
+```
+
 #### Downloading Files
 ```powershell
 Invoke-WebRequest "https://api.ipify.org" -OutFile "C:\Users\$env:username\Desktop\ip.txt"
@@ -114,7 +129,8 @@ Invoke-WebRequest "https://api.ipify.org" -OutFile "C:\Users\$env:username\Deskt
 ```powershell
 Start-Process notepad.exe #-Wait
 ```
-#### Logic
+
+### `Challange` Make This Script Work
 ```powershell
 $filepath = "C:\Users\$env:username\Desktop\ip.txt"
 
