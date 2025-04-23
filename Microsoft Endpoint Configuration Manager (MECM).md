@@ -15,8 +15,8 @@
 
 ### `Automatically` Every 60 minutes
 
-### `Manual` Control Panel > View By: Icon > Configuration Manager > Actions
-<img src="https://www.prajwaldesai.com/wp-content/uploads/2022/03/Trigger-SCCM-Machine-Policy-Retrieval-Evaluation-Cycle-Snap1.jpg" alt="drawing" width="600"/>
+>> ### `Manual` Control Panel > View By: Icon > Configuration Manager > Actions
+>> <img src="https://www.prajwaldesai.com/wp-content/uploads/2022/03/Trigger-SCCM-Machine-Policy-Retrieval-Evaluation-Cycle-Snap1.jpg" alt="drawing" width="600"/>
 
 ### PowerShell
 ```powershell
