@@ -23,11 +23,11 @@ $username = $env:username
 Write-Host "`$username = $username `n"
 
 # store string in variable
-$myvar = " This Is Easy"
-Write-Host "${username}$myvar`n"
+$myvar = "This Is Easy"
+Write-Host "$username $myvar`n"
 
 # last trick
-Write-Host "C:\Users\${env:username}\Desktop"
+Write-Host "C:\Users\$($env:username)\Desktop"
 ```
 
 ## Test | Create | Remove
@@ -89,5 +89,25 @@ if(Test-Path "C:\Temp\bad.txt" -PathType Leaf){
 #### Invoke-Webrequest
 ```powershell
 Invoke-WebRequest "https://api.ipify.org"
-(Invoke-WebRequest "https://api.ipify.org").content
+```
+#### Using Content
+```powershell
+$request = Invoke-WebRequest "https://api.ipify.org" -UseBasicParsing
+$ip = $request.Content
+Clear-Host
+Write-Host "StatusCode = $($request.StatusCode)"
+Write-Host "IP = $ip" 
+```
+
+#### Downloading Files
+```powershell
+Invoke-WebRequest "https://api.ipify.org" -OutFile "C:\Users\$env:username\Desktop\ip.txt"
+```
+
+## Starting Processes
+```powershell
+$filepath = "C:\Users\$env:username\Desktop\ip.txt"
+
+Invoke-WebRequest "https://api.ipify.org" -OutFile $filepath
+Start-Process notepad.exe -ArgumentList "$filepath" -Wait
 ```
