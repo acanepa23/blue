@@ -4,7 +4,7 @@
 ```
 C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 ```
-> <img src="https://th.bing.com/th/id/OIP.q1JszvLP2SIL_3Bmc07eNAAAAA?rs=1&pid=ImgDetMain" alt="drawing" width="800"/>
+> <img src="https://i0.wp.com/windowsloop.com/wp-content/uploads/2021/12/open-windows-terminal-as-admin-201221.jpg?resize=1024%2C573&ssl=1" alt="drawing" width="800"/>
 
 ## Windows PowerShell ISE
 ```
