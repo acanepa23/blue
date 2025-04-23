@@ -4,6 +4,7 @@
 ```
 C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 ```
+> <img src="https://th.bing.com/th/id/OIP.q1JszvLP2SIL_3Bmc07eNAAAAA?rs=1&pid=ImgDetMain" alt="drawing" width="800"/>
 
 ## Windows PowerShell ISE
 ```
