@@ -13,7 +13,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe
 > <img src="https://user.oc-static.com/upload/2022/04/26/16509977637453_image107.png" alt="drawing" width="800"/>
 
 ## Clear | Write | Variables
-#### Write-Host
+#### `Write-Host`
 ```powershell
 Write-Host "Hello World"
 ```
@@ -42,24 +42,28 @@ C:\Users\Administrator\Desktop
 
 ## Test | Create | Remove
 
-#### Test-Path
+#### `Test-Path`
 ```powershell
 Test-Path "C:\Temp" -PathType Container
 ```
 
-#### New-Item
+#### `New-Item`
 ```powershell
 New-Item "C:\Temp" -ItemType Directory
+```
+```powershell
 New-Item "C:\Temp" -ItemType Directory -Force
+```
+```powershell
 New-Item "C:\Temp" -ItemType Directory -Force | Out-Null
 ```
 
-#### Remove-Item
+#### `Remove-Item`
 ```powershell
 Remove-Item "C:\Temp"
 ```
 
-#### Conditions
+#### `if` and `else` Statements
 ```powershell
 if(<<is this $True or $False>>){
     <<when $True do this>>
@@ -101,10 +105,26 @@ C:\Temp\Administrator.txt
 
 ## Website Requests
 
-#### Invoke-Webrequest
+#### `Invoke-Webrequest`
 ```powershell
 Invoke-WebRequest "https://api.ipify.org"
 ```
+
+#### `Select-Object` & `|`
+```powershell
+$properties = Invoke-WebRequest "https://api.ipify.org" | Select-Object *
+
+$properties
+
+$properties.Content
+```
+```powershell
+Invoke-WebRequest "https://api.ipify.org" | Select-Object Content
+```
+```powershell
+(Invoke-WebRequest "https://api.ipify.org").Content
+```
+
 #### Using Content
 ```powershell
 $request = Invoke-WebRequest "https://api.ipify.org" -UseBasicParsing
@@ -124,10 +144,23 @@ xxx.xxx.xxx.xxx
 Invoke-WebRequest "https://api.ipify.org" -OutFile "C:\Users\$env:username\Desktop\ip.txt"
 ```
 
-## Starting Processes
-#### Start-Process
+#### `Out-File`
 ```powershell
-Start-Process notepad.exe #-Wait
+(Invoke-WebRequest "https://api.ipify.org").Content | Out-File "C:\Users\$env:username\Desktop\ip.txt"
+```
+```powershell
+(Invoke-WebRequest "https://api.ipify.org").Content > "C:\Users\$env:username\Desktop\ip.txt"
+```
+
+### `Challange` Using the Content of the Request Create a File Named the IP
+```
+C:\Users\Administrator\Desktop\xxx.xxx.xxx.xxx.txt
+```
+
+## Starting Processes
+#### `Start-Process`
+```powershell
+Start-Process notepad.exe -Wait
 ```
 
 ### `Challange` Make This Script Work
@@ -138,4 +171,26 @@ Invoke-WebRequest "https://api.ipify.org" -OutFile $filepath
 Start-Process notepad.exe -ArgumentList $filepath
 
 Remove-Item $filepath
+```
+
+## Reading files
+### `Get-Content`
+```powershell
+$filepath = "C:\Users\$env:username\Desktop\ip.txt"
+Invoke-WebRequest "https://api.ipify.org" -OutFile $filepath
+Get-Content $filepath
+```
+
+### `Challange` Using Get-Content Store the Result as a Variable and Print to Screen
+```powershell
+$filepath = "C:\Users\$env:username\Desktop\ip.txt"
+Invoke-WebRequest "https://api.ipify.org" -OutFile $filepath
+Get-Content $filepath
+```
+
+## Foreach Loops
+```powershell
+foreach($_ in (1..10)){
+    Write-Host $_
+}
 ```
