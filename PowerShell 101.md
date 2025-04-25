@@ -33,6 +33,7 @@ Write-Host "$username $myvar`n"
 
 # last trick
 Write-Host "$($env:username)"
+Write-Host "$(whoami)"
 ```
 
 ### `Challange` Print The Path To Your Desktop
